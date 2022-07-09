@@ -1,6 +1,5 @@
 # proxy-stuff
 stuff for MTG proxies. 
- 
 
 # Custom CSS to hide the "Permalink" text on MTGpics.com
 
@@ -46,7 +45,7 @@ Please for the love of god use MrTeferi's [MTG-Art-Downloader](https://github.co
 
 ## PowerShell script to download an entire set from MTGpics.com
 
-This script is very basic and requires you to manually edit the code. It's setup to download all of the english Strixhaven Mystical Archive arts. To use, copy the script and save it as a .ps1 file. It will download all images to the folder the script is in.
+This script is very basic and requires you to manually edit the code. It's set up to download all of the english Strixhaven Mystical Archive arts. To use, copy the script and save it as a .ps1 file. It will download all images to the folder the script is in.
 
 ```ps1
 Set-Location -Path $PSScriptRoot
