@@ -1,5 +1,25 @@
 # proxy-stuff
-stuff for MTG proxies. 
+
+stuff for MTG proxies.
+
+# printable MPCfill.com
+
+A powershell script that turns images from mpcfill.com into a printable webpage.
+
+## Usage
+
+1. Download [the script](https://raw.githubusercontent.com/reisir/proxy-stuff/main/print/generate_sheet.ps1) (right click > save as)
+2. Make a folder and place the script in it.
+3. Make another folder next to the script called `images`
+4. Go to mpcfill.com, customize your order and click "download all images"
+
+   - This will fail if you haven't allowed popups for mpcfill.com
+   - If your browser asks you where to save files everytime, this will suck
+
+5. Move all of the images to the `images` folder you made before
+6. Run the `generate_sheet` script
+7. Open the generated index.html file in your browser
+8. Hit `ctrl + P` and select your paper size and print to pdf
 
 # Custom CSS to hide the "Permalink" text on MTGpics.com
 
@@ -9,7 +29,7 @@ To use, install a browser extension like [Stylus](https://addons.mozilla.org/en-
 
 ```css
 .CardW16 > div {
-    display: none !important;
+  display: none !important;
 }
 ```
 
@@ -21,7 +41,7 @@ Matches the card name and artist name from the mtgpics title. Use with a program
 
 eg. `Llanowar Mentor (Future Sight) - art by Trevor Hairsine` turns into `Llanowar Mentor (Trevor Hairsine)`
 
-Matching pattern: 
+Matching pattern:
 
 ```regex
 (.*)\(.*\).*by (.*)
@@ -133,7 +153,7 @@ $names = @(
     "Putrefy (Minttu Hynninen)"
 )
 
-Get-ChildItem -Filter *.png | 
+Get-ChildItem -Filter *.png |
 Foreach-Object {
 
     $ext = $_.Extension
@@ -147,9 +167,9 @@ Foreach-Object {
 }
 ```
 
-You might notice the giant array of card names there, and yeah, you need to get those yourself for the set you downloaded. 
+You might notice the giant array of card names there, and yeah, you need to get those yourself for the set you downloaded.
 
-How I got the Mystical Archive card names in order: 
+How I got the Mystical Archive card names in order:
 
 1. Search for the set on scryfall, eg. `set:sta`
 2. Switch to "checklist" view
